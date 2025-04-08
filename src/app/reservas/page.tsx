@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { format } from 'date-fns';
-import { es } from 'date-fns/locale';
 
 export default function Reservas() {
   const [formData, setFormData] = useState({
@@ -50,8 +49,6 @@ export default function Reservas() {
     return esDomingo ? horasAlmuerzo : [...horasAlmuerzo, ...horasCena];
   };
 
-  const horasDisponibles = getHorasDisponibles();
-  
   // Opciones de ocasiones especiales
   const ocasiones = [
     { value: 'normal', label: 'Visita regular' },
@@ -232,7 +229,7 @@ export default function Reservas() {
                           value="peru-diverso"
                           className="mr-2"
                         />
-                        <label htmlFor="peru-diverso">Menú "Perú Diverso" (450 PEN)</label>
+                        <label htmlFor="peru-diverso">Menú &quot;Perú Diverso&quot; (450 PEN)</label>
                       </div>
                       <div className="flex items-center">
                         <input
@@ -242,7 +239,7 @@ export default function Reservas() {
                           value="amazonia"
                           className="mr-2"
                         />
-                        <label htmlFor="amazonia">Menú "Amazonía" (350 PEN)</label>
+                        <label htmlFor="amazonia">Menú &quot;Amazonía&quot; (350 PEN)</label>
                       </div>
                     </div>
                   </div>
@@ -284,7 +281,7 @@ export default function Reservas() {
             <ul className="space-y-3">
               <li>• Las reservas deben realizarse con al menos 2 semanas de antelación para garantizar disponibilidad.</li>
               <li>• Para grupos de más de 8 personas, por favor contáctanos directamente al +51 1 442 2777.</li>
-              <li>• Para la "Mesa del Chef" (experiencia exclusiva), es necesario hacer reserva telefónica.</li>
+              <li>• Para la &quot;Mesa del Chef&quot; (experiencia exclusiva), es necesario hacer reserva telefónica.</li>
               <li>• Dress code: Smart casual (no se permiten shorts ni chanclas).</li>
               <li>• Se aplicará un cargo del 50% del valor por cancelaciones con menos de 48 horas de antelación.</li>
               <li>• Para solicitudes dietéticas especiales, por favor especificar en el formulario o contactar con antelación.</li>
